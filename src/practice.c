@@ -1,8 +1,11 @@
 #include "practice.h"
 #include "stdio.h"
 
+char *p = "ABC";
 void daoTu()
 {
-    printf("Hello world from daoTu\r\n");
+    p = "084";
+    printf("Vietnam country code: %s- p:%s\r\n",
+     VIETNAM_COUNTRY_CODE, p);
 
 }
