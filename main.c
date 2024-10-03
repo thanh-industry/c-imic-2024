@@ -17,7 +17,10 @@ int main(void)
 #ifdef BAI_TAP_1
 	int a = 3;
 
-#elif BAI_TAP_2
+
+#endif
+
+#ifdef BAI_TAP_2
 
 	int b;
 
