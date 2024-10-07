@@ -18,16 +18,9 @@ void tamGiacPascal(unsigned int n)
         {
             printf(" ");
         }
-        /* for (k = 0; k < (2 * i) + 1; k++)
-        {
-            if (k % 2 == 0)
-                printf("*");
-            else
-                printf(" ");
-        } */
         for (k = 0; k <= i; k++)
         {
-            printf(" %d ", giai_thua(i) / (giai_thua(k) * giai_thua(i - k)));
+            printf("%d  ", giai_thua(i) / (giai_thua(k) * giai_thua(i - k)));
         }
         printf("\n");
     }
