@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void list(char typeArr[8], char *arr)
+void list(char *typeArr, char *arr)
 {
     int i;
     for (i = 0; i < 13; i++)

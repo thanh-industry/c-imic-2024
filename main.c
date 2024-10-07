@@ -10,8 +10,8 @@
 // #define BAI_TAP_1 // Tao va in bien so
 // #define BAI_TAP_2 // Tao va in struct hoc sinh
 // #define BAI_TAP_4 // Sap xep mang so nguyen
-#define BAI_TAP_5 // Dao chuoi
-// #define BAI_TAP_6 // Tam giac Pascal
+// #define BAI_TAP_5 // Dao chuoi
+#define BAI_TAP_6 // Tam giac Pascal
 
 int main(void)
 {
