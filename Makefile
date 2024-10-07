@@ -1,12 +1,11 @@
 CFLAGS += -g -Wall
 
-EXEC = abc
+EXEC = run
 
 INC = -Iinc/
 SRC = \
 	main.c  \
-	src/example.c  \
-	src/practice.c 
+	src/BAI_5.c
 
 
 	

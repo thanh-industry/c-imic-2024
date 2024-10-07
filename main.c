@@ -1,49 +1,53 @@
-#include "stdio.h"
-#include "stdio.h"
-#include "unistd.h"
-#include "example.h"
-#include "practice.h"
-#include "string.h"
-unsigned int counter = 0;
+#include <stdio.h>
+#include <unistd.h>
+#include <stdint.h>
+#include "BAI_1.h"
+#include "BAI_2.h"
+#include "BAI_4.h"
+#include "BAI_5.h"
+#include "BAI_6.h"
 
-//#define BAI_TAP_1 
-#define BAI_TAP_2 
+// #define BAI_TAP_1 // Tao va in bien so
+// #define BAI_TAP_2 // Tao va in struct hoc sinh
+// #define BAI_TAP_4 // Sap xep mang so nguyen
+// #define BAI_TAP_5 // Dao chuoi
+#define BAI_TAP_6 // Tam giac Pascal
 
 int main(void)
 {
-	daoTu();
-	setVAT(8);
-	char *str = "this is the string to be reverted.";
 #ifdef BAI_TAP_1
-	int a = 3;
-
-
+	inBienSo();
 #endif
 
 #ifdef BAI_TAP_2
-
-	int b;
-
-
-	int c;
-
-
+	hocSinh();
 #endif
 
+#ifdef BAI_TAP_4
+	int arr[13] = {21, 321, 91, 31, 5634, 213, 12, 1, 2134, 2314, -912, -18, 312};
+	sortArray(arr);
+#endif
 
+#ifdef BAI_TAP_5
 
+	char str[1000];
+	printf("Please input your string:");
+	scanf("%s", &str);
 
+	int type;
+	printf("Please input your type of reverse (1 - reverse whole string, 2 - reverse each word): ");
+	scanf("%d", &type);
 
-	char arr[64];
+	daoChuoi(str, type);
+#endif
 
-	memcpy(arr, str, strlen(str) + 1);
-	while (1)
-	{
-		revertString(str, 0);
-		counter++;
-		sleep(1);
-	}
-	
+#ifdef BAI_TAP_6
+	int n;
+	printf("Please input your number: ");
+	scanf("%d", &n);
+
+	tamGiacPascal(n);
+#endif
+
 	return 1;
-
 }
