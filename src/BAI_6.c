@@ -1,11 +1,11 @@
 #include "BAI_6.h"
 #include <stdio.h>
 
-unsigned int giai_thua(unsigned int n)
+unsigned int giai_thua(unsigned int a)
 {
-    if (n == 0 || n == 1)
+    if (a == 0 || a == 1)
         return 1;
-    return n * giai_thua(n - 1);
+    return a * giai_thua(a - 1);
 }
 
 void tamGiacPascal(unsigned int n)
