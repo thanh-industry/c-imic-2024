@@ -1,8 +1,10 @@
+#include <stdio.h>
 #include "BAI_5.h"
 
 void daoChuoi(char *chuoi, int kiTu)
 {
     printf("Chuoi ki tu truoc khi dao: %s\r\n", chuoi);
+
     if (kiTu == 0)
     {
         int i = 0;
