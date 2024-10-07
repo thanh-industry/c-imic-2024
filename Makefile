@@ -11,7 +11,14 @@ SRC = \
 	src/BAI_5.c \
 	src/BAI_6.c \
 
-
+ifeq ($(OS),Windows_NT)
+	SHELL = cmd.exe
+    RM = del /F /Q
+	EXEC_EXT = .exe
+else
+    RM = rm -f
+	EXEC_EXT =
+endif
 	
 #target
 $(EXEC):  
@@ -19,4 +26,4 @@ $(EXEC):
 
 
 clean:
-	-rm -f  $(EXEC)
+	-$(SHELL) /C $(RM)  $(EXEC)$(EXEC_EXT)
