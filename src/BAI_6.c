@@ -8,11 +8,14 @@ unsigned int giai_thua(unsigned int a)
     return a * giai_thua(a - 1);
 }
 
-void tamGiacPascal(unsigned int n)
+void tamGiacPascal(void)
 {
+    unsigned int n;
+    printf("Please input your number: ");
+    scanf("%d", &n);
 
     unsigned int i, j, k;
-    for (i = 0; i <= n; i++)
+    for (i = 0; i < n; i++)
     {
         for (j = 0; j < n - i; j++)
         {
@@ -20,8 +23,16 @@ void tamGiacPascal(unsigned int n)
         }
         for (k = 0; k <= i; k++)
         {
-            printf("%d  ", giai_thua(i) / (giai_thua(k) * giai_thua(i - k)));
+            printf("%3d", giai_thua(i) / (giai_thua(k) * giai_thua(i - k)));
         }
         printf("\n");
     }
+
+    printf("Do you want to input again? [Y/N]: ");
+    char type;
+    scanf(" %c", &type);
+    if (type == 'Y' || type == 'y')
+        tamGiacPascal();
+    else
+        return;
 }

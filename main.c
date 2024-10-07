@@ -42,11 +42,9 @@ int main(void)
 #endif
 
 #ifdef BAI_TAP_6
-	unsigned int n;
-	printf("Please input your number: ");
-	scanf("%d", &n);
 
-	tamGiacPascal(n);
+	tamGiacPascal();
+
 #endif
 
 	return 1;
