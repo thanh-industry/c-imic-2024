@@ -42,7 +42,7 @@ int main(void)
 #endif
 
 #ifdef BAI_TAP_6
-	int n;
+	unsigned int n;
 	printf("Please input your number: ");
 	scanf("%d", &n);
 
