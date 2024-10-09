@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void list(char *typeArr, char *arr)
+void list(char *typeArr, int *arr)
 {
     int i;
     for (i = 0; i < 13; i++)
@@ -20,7 +20,7 @@ void list(char *typeArr, char *arr)
     }
 }
 
-void sortArray(char *arr)
+void sortArray(int *arr)
 {
     int i;
     int j;
