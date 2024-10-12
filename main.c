@@ -6,12 +6,14 @@
 #include "BAI_4.h"
 #include "BAI_5.h"
 #include "BAI_6.h"
+#include "BAI_7.h"
 
 // #define BAI_TAP_1 // Tao va in bien so
 // #define BAI_TAP_2 // Tao va in struct hoc sinh
 // #define BAI_TAP_4 // Sap xep mang so nguyen
 // #define BAI_TAP_5 // Dao chuoi
-#define BAI_TAP_6 // Tam giac Pascal
+// #define BAI_TAP_6 // Tam giac Pascal
+#define BAI_TAP_7 // Tim cau trong doan van, su dung malloc() de input doan van
 
 int main(void)
 {
@@ -44,6 +46,12 @@ int main(void)
 #ifdef BAI_TAP_6
 
 	tamGiacPascal();
+
+#endif
+
+#ifdef BAI_TAP_7
+
+	timCauTrongDoanVan();
 
 #endif
 

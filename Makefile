@@ -10,6 +10,7 @@ SRC = \
 	src/BAI_4.c \
 	src/BAI_5.c \
 	src/BAI_6.c \
+	src/BAI_7.c
 
 ifeq ($(OS),Windows_NT)
 	SHELL = cmd.exe
