@@ -3,6 +3,7 @@ Cho mảng {21,321,91,31,5634,213,12,1,2134,2314,-912,-18,312}
 Sắp xếp mảng theo thứ tự từ bé đến lớn
 */
 #include <stdio.h>
+#include "BaiTap.h"
 void swap(int *xp, int *yp) {
     int temp = *xp;
     *xp = *yp;
@@ -17,15 +18,23 @@ void bubbleSort(int arr[], int n) {
         }
     }
 }
-int main() {
+int KetQuaBaiTap1_4() {
+    printf("BAT DAU BAI TAP 1.4 >>>>>>>>>>>>>>>>>>>>>>\r\n"); // BẮT ĐẦU BÀI TẬP 1.4
     int arr[] = {21, 321, 91, 31, 5634, 213, 12, 1, 2134, 2314, -912, -18, 312};
     int n = sizeof(arr) / sizeof(arr[0]);
-    bubbleSort(arr, n);
-    printf("Mảng sau khi sắp xếp là: \n");
+    printf("Day so da cho la: \r\n");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
-    printf("\n");
+    printf("\r\n");
+    bubbleSort(arr, n);
+    printf("Day so sau khi sap xep xong la: \r\n");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf(" \r\n");
+    printf("KET THUC BAI TAP 1.4.................\r\n"); // KẾT THÚC BÀI TẬP 1.4
+    printf("\n");   
     return 0;
 }
 /*	Con trỏ dữ liệu;

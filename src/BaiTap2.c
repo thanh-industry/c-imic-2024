@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "BaiTap.h"
 int a = 0, // Biến điều kiện kiểu Integer ứng với 2 trường hợp (khi a = 0 và a = 1)
     n, // Biến số nguyên lưu độ dài của chuỗi ký tự (khi a = 0), độ dài của từ word (khi a = 1)
     i; // Biến số nguyên để chạy vòng lặp for (dùng chung khi a = 0, a = 1)
@@ -38,19 +39,40 @@ void DaoTungKyTuTrongChuoi(char *ChuoiKyTu) { // Cần dùng hàm strtok
                                   // cần XÓA đi 1 dấu cách cuối cùng để đúng với chuỗi gốc đã cho
     strcpy(ChuoiKyTu, ChuoiTrungGian); // Sao chép lại ChuoiTrungGian đã đảo xong vào ChuoiKyTu để in rá
 }
-int main() { // Chương trình chính
-    printf("Nhập giá trị của a (TH1: a = 0; TH2: a = 1): \r\n");
+int KetQuaBaiTap2() { // Chương trình
+    printf("BAT DAU BAI TAP 2 >>>>>>>>>>>>>>>>>>>>>>\r\n"); // BẮT ĐẦU BÀI TẬP 2
+    printf("HAY NHAP gia tri cua a: \r\n");
+    printf(" * TH1 (a = 0): Dao toan bo chuoi; \r\n");
+    printf(" * TH2 (a = 1): Dao tung tu trong chuoi. \r\n");
     scanf("%d", &a); // Nhập từ bàn phím giá trị của a
     switch (a) {
-        case 0: // Nếu a = 0: Hoán đổi vị trí toàn bộ chuỗi, ngược từ cuối lên đầu 
+        case 0: // Nếu a = 0: Hoán đổi vị trí toàn bộ chuỗi, ngược từ cuối lên đầu
+            printf("Ban da chon TH1 (a = 0): Dao toan bo chuoi\r\n");
             DaoToanBoChuoi(ChuoiKyTu); // Thực hiện chương trình hoán đổi (TH1: a = 0)
         break; // Thoát khỏi switch
         case 1: // Nếu a = 1: Hoán đổi vị trí từng chữ trong chuỗi, lần lượt từ đầu đến cuối 
+            printf("Ban da chon TH2 (a = 1): Dao tung tu trong chuoi \r\n");
             DaoTungKyTuTrongChuoi(ChuoiKyTu); // Thực hiện chương trình hoán đổi (TH1: a = 0)
         break; // Thoát khỏi switch
+        default:
+        break; // Thoát khỏi switch
     }
-    printf("Chuỗi cần đảo cần tìm là: \r\n");
+    printf("Chuoi can dao can tim la: \r\n");
     printf("%s\n", ChuoiKyTu); // In ra chuỗi đã được sắp xếp
+    printf(" \r\n");
+    printf("Truong hop con lai: \r\n");
+    if (a == 0) {
+        printf("TH2 (a = 1): Dao tung tu trong chuoi \r\n");
+        DaoTungKyTuTrongChuoi(ChuoiKyTu); // Thực hiện chương trình hoán đổi (TH1: a = 0)
+    }
+    else if (a == 1) {
+        printf("TH1 (a = 0): Dao toan bo chuoi\r\n");
+        DaoToanBoChuoi(ChuoiKyTu); // Thực hiện chương trình hoán đổi (TH1: a = 0)
+    }
+    printf("Chuoi can dao can tim la: \r\n");
+    printf("%s\n", ChuoiKyTu); // In ra chuỗi đã được sắp xếp
+    printf("KET THUC BAI TAP 2..................\r\n"); // KẾT THÚC BÀI TẬP 2
+    printf("\n");
     return 0;
 }
 /* HÀM STRTOK:
@@ -66,4 +88,18 @@ Tham số:
     delim: Chuỗi chứa các ký tự được sử dụng làm dấu phân cách.
 Giá trị trả về:
     Trả về con trỏ đến token tiếp theo trong chuỗi. Nếu không còn token nào nữa, nó sẽ trả về NULL.
+*/
+/*
+int getGiadien(void) { Cung cấp phương thức của mình
+    return Giadien*VAT/100; //Implement biến của người khác
+}
+Không dùng Enturn để truy cập thẳng vào biến => Thống nhất về ABI: gọi int getGiadien(void);
+file .h khai báo #define, không đặt biến trong .h
+file .c khai báo biến, chỉ cần gọi #include " .h" ra
+*/
+/* 
+#ifdef BAI_TAP_1
+#endif
+#elif BAI_TAP_2
+#endif
 */
