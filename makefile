@@ -12,7 +12,8 @@ SRC = \
 	src/BaiTap1_4.c \
 	src/BaiTap2.c \
 	src/BaiTap3_1.c \
-	src/BaiTap3_2.c 
+	src/BaiTap3_2.c \
+	src/BaiTap4.c 
 
 #target
 $(EXEC):  

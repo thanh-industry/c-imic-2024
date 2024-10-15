@@ -7,4 +7,5 @@
     int KetQuaBaiTap2();
     int KetQuaBaiTap3_1();
     int KetQuaBaiTap3_2();
+    int KetQuaBaiTap4();
 #endif
