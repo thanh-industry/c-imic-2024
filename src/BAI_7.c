@@ -60,10 +60,10 @@ void timCau(char *str, char *printStr_, int sNo, int cCount)
         printStr_[m] = '\0';
     }
 
-    printf("The sentence No. %d is: %s\r\n", sNo, printStr_);
+    // printf("The sentence No. %d is: %s\r\n", sNo, printStr_);
 }
 
-void timCauTrongDoanVan(void)
+char *timCauTrongDoanVan(void)
 {
     char *str = (char *)malloc(1000 * sizeof(char));
 
@@ -86,18 +86,7 @@ void timCauTrongDoanVan(void)
     timCau(str, printStr, sentenceNo, charNo);
 
     free(str);
-    free(printStr);
+    // free(printStr);
 
-    printf("Do you want to input again? [Y/N]: ");
-    char type;
-    scanf(" %c", &type);
-    if (type == 'Y' || type == 'y')
-    {
-        while (getchar() != '\n');
-        timCauTrongDoanVan();
-    }
-    else
-    {
-        return;
-    }
+    return printStr;
 }

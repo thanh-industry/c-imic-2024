@@ -27,12 +27,4 @@ void tamGiacPascal(void)
         }
         printf("\n");
     }
-
-    printf("Do you want to input again? [Y/N]: ");
-    char type;
-    scanf(" %c", &type);
-    if (type == 'Y' || type == 'y')
-        tamGiacPascal();
-    else
-        return;
 }
