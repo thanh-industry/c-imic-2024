@@ -1,0 +1,7 @@
+{
+    "makefile.configureOnOpen": true,
+    "files.associations": {
+        "stdio.h": "c",
+        "baitaptamgiacpascal": "c"
+    }
+}
