@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/LapTrinhC,C++/c-imic-2024",
-      "program": "d:/LapTrinhC,C++/c-imic-2024/build/Debug/outDebug",
+      "cwd": "d:/LapTrinhC,C++/c-imic-2024/src",
+      "program": "d:/LapTrinhC,C++/c-imic-2024/src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
