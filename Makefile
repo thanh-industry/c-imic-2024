@@ -5,7 +5,6 @@ EXEC = abc
 INC = -Iinc/
 SRC = \
 	main.c  \
-	src/example.c 
 
 	
 #target
