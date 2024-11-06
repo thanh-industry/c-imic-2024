@@ -1,3 +1,4 @@
+// C library
 #include <stdio.h>
 #include <unistd.h>
 #include <stdint.h>
@@ -11,6 +12,8 @@
 #include "BAI_7.h"
 #include "BAI_8.h"
 #include "BAI_9.h"
+
+// C++ library
 #include "BAI_10.hpp"
 
 // #define BAI_TAP_1 // C: Tao va in bien so
