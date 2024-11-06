@@ -11,15 +11,17 @@
 #include "BAI_7.h"
 #include "BAI_8.h"
 #include "BAI_9.h"
+#include "BAI_10.hpp"
 
-// #define BAI_TAP_1 // Tao va in bien so
-// #define BAI_TAP_2 // Tao va in struct hoc sinh
-// #define BAI_TAP_4 // Sap xep mang so nguyen
-// #define BAI_TAP_5 // Dao chuoi
-// #define BAI_TAP_6 // Tam giac Pascal
-// #define BAI_TAP_7 // Tim cau trong doan van, su dung malloc() de input doan van
-// #define BAI_TAP_8 // Khai bao va su dung con tro ham
-#define BAI_TAP_9 // Library Book Management System
+// #define BAI_TAP_1 // C: Tao va in bien so
+// #define BAI_TAP_2 // C: Tao va in struct hoc sinh
+// #define BAI_TAP_4 // C :Sap xep mang so nguyen
+// #define BAI_TAP_5 // C: Dao chuoi
+// #define BAI_TAP_6 // C: Tam giac Pascal
+// #define BAI_TAP_7 // C: Tim cau trong doan van, su dung malloc() de input doan van
+// #define BAI_TAP_8 // C: Khai bao va su dung con tro ham
+// #define BAI_TAP_9 // C: Library Book Management System
+#define BAI_TAP_10 // C++: Create base class, derived class and operator overloading of Complex
 
 int main(void)
 {
@@ -264,6 +266,12 @@ int main(void)
 			break;
 		} // End of switch
 	} // End of while
+
+#endif
+
+#ifdef BAI_TAP_10
+
+	complexClass();
 
 #endif
 

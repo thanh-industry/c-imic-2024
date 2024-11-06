@@ -1,10 +1,16 @@
+# Complier and flags define
+CC = gcc
+CXX = g++
 CFLAGS += -g -Wall
+CXXFLAGS += -g -Wall
 
 EXEC = run
 
+
+# Source and includes files
 INC = -Iinc/
-SRC = \
-	main.c  \
+
+SRC_C = \
 	src/error_handling.c \
 	src/BAI_1.c \
 	src/BAI_2.c \
@@ -15,19 +21,48 @@ SRC = \
 	src/BAI_8.c \
 	src/BAI_9.c \
 
-ifeq ($(OS),Windows_NT)
-	SHELL = cmd.exe
-    RM = del /F /Q
-	EXEC_EXT = .exe
-else
-    RM = rm -f
-	EXEC_EXT =
-endif
+SRC_CPP = \
+	main.cpp  \
+	src/BAI_10.cpp \
+
+
+# Method for converting source files to object files
+OBJ_C = $(SRC_C:.c=.o)
+OBJ_CPP = $(SRC_CPP:.cpp=.o)
+OBJS = $(OBJ_C) $(OBJ_CPP)
+
+
+# Pattern rule for compiling C source files
+%.o: %.c
+	$(CC) $(CFLAGS) $(INC) -c $< -o $@
+
+# Pattern rule for compiling C++ source files
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(INC) -c $< -o $@
 	
-#target
-$(EXEC):  
-	$(CC) $(CFLAGS) $(SRC) $(INC) -o $@
+
+# build target
+$(EXEC):  $(OBJ_C) $(OBJ_CPP)
+	$(CXX) $(CFLAGS) $(CXXFLAGS) $(OBJ_C) $(OBJ_CPP) $(INC) -o $@
+
+# SHELL = cmd.exe
+# define OS for cleaning method
+ifeq ($(OS),Windows_NT)
+	EXEC_EXT = .exe
+	OBJ_CLEAN_CMD = del /F /Q $(subst /,\,$(OBJS))
+	EXEC_CLEAN_CMD = del /F /Q $(EXEC)$(EXEC_EXT)
+else
+	EXEC_EXT =
+	OBJ_CLEAN_CMD = rm -f $(OBJS)
+	EXEC_CLEAN_CMD = rm -f $(EXEC)
+endif
 
 
+# clean file
 clean:
-	-$(SHELL) /C $(RM)  $(EXEC)$(EXEC_EXT)
+	$(EXEC_CLEAN_CMD)
+	$(OBJ_CLEAN_CMD)
+
+# clean only object files
+oclean:
+	$(OBJ_CLEAN_CMD)
