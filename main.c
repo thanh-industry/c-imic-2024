@@ -9,6 +9,6 @@ int main() {
 	// KetQuaBaiTap3_1();
 	// KetQuaBaiTap3_2();
 	// KetQuaBaiTap4();
-	KetQuaBaiTap5();
+	//KetQuaBaiTap5();
 	return 0;
 }
